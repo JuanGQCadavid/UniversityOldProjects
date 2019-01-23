@@ -1,0 +1,29 @@
+#Muestras los indicies d elocalizacion de la caden ainicial en la otra cadena esa
+
+inicio:	  dirBase := 6
+	  uno := 1
+	  contador:= 0
+	  nulo := 0
+	  tamanoLargo := 80
+
+Leer:	  readStr(a, uno)
+	  readStr(b, tamanoLargo)
+	  contador := contador - uno
+
+ciclo:	  contador := contador + uno
+	  dirBase := dirBase + uno
+	  temp := M[dirBase + 0]
+
+	  if temp  = nulo then goto fin
+	  
+	  if temp <> a then goto ciclo
+	  writeInt(contador)
+	  goto ciclo
+
+fin:	  halt
+
+equ dirBase M[0] equ uno M[1] equ contador M[2]
+equ nulo M[3] equ tamanoLargo M[4] equ a M[5]
+equ temp M[6] equ b M[7]
+	  
+	  

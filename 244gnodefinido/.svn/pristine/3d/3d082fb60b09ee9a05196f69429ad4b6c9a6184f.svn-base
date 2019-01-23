@@ -1,0 +1,225 @@
+# testdata/test2016214.ewe
+start:
+	zero := 0
+	a := 0
+	b := 0
+	c := 0
+	s := 0
+	memory := 0
+	d := 0
+	operator2 := 0
+	one := 1
+	operator1 := 0
+	sp := 1011
+# Push(0)
+	sp := sp - one
+	operator1 := 0
+	M[sp + 0] := operator1
+# Assign
+	a := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(1)
+	sp := sp - one
+	operator1 := 1
+	M[sp + 0] := operator1
+# Assign
+	b := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(2)
+	sp := sp - one
+	operator1 := 2
+	M[sp + 0] := operator1
+# Assign
+	c := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	a := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	b := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := c
+	M[sp + 0] := operator1
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	c := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Push(2)
+	sp := sp - one
+	operator1 := 2
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	a := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(3)
+	sp := sp - one
+	operator1 := 3
+	M[sp + 0] := operator1
+# Minus
+	operator1 := M[sp + 0]
+	memory := memory - operator1
+	M[sp + 0] := memory
+# Assign
+	b := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(4)
+	sp := sp - one
+	operator1 := 4
+	M[sp + 0] := operator1
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Assign
+	c := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(5)
+	sp := sp - one
+	operator1 := 5
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Assign
+	s := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Clear
+	memory := zero
+	sp := sp - one
+	M[sp + 0] := memory
+# Assign
+	c := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(3)
+	sp := sp - one
+	operator1 := 3
+	M[sp + 0] := operator1
+# Minus
+	operator1 := M[sp + 0]
+	memory := memory - operator1
+	M[sp + 0] := memory
+# Push(2)
+	sp := sp - one
+	operator1 := 2
+	M[sp + 0] := operator1
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Clear
+	memory := zero
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	d := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+end:	halt
+# Variables
+equ zero	M[0]
+equ a	M[1]
+equ b	M[2]
+equ c	M[3]
+equ s	M[4]
+equ memory	M[5]
+equ d	M[6]
+equ operator2	M[7]
+equ one	M[8]
+equ operator1	M[9]
+equ sp	M[10]
+equ stack	M[1011]

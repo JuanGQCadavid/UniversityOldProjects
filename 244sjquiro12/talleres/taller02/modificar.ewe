@@ -1,0 +1,42 @@
+#Programa que dice si son iguales
+
+inicio:	  cero 	   := 0
+	  uno  	   := 1
+	  dirA	   := 0
+	  posA	   := 57
+	  
+	  tam	   := 50
+
+	  dirB	   := 0
+	  posB	   := 108
+
+	  RespG	   := "Si joven, imaginate son iguales"
+	  RespF	   := "Ahhh, no son iguales, que fallo ome"
+
+
+leer:	  readStr(cadenaA, tam)
+	  readStr(cadenaB, tam)
+
+
+ciclo:	  dirA := M[posA + 0]
+	  posA := posA + uno
+	  
+	  dirB := M[posB + 0]
+	  posB := posB + uno
+
+	  if dirB<> dirA then goto RespF
+	  if dirB = cero then goto RespG
+
+	  goto ciclo
+
+RespF:	  writeStr(RespF)
+	  halt
+	  
+RespG:	  writeStr(RespG)
+	  halt
+
+equ cero M[0] equ uno M[1] equ posA M[2] equ dirA M[3]
+equ tam M[4] equ dirB M[5] equ posB M[6] equ cadenaA M[57]
+equ cadenaB M[108] equ RespG M[159] equ RespF M[210] 
+
+	  

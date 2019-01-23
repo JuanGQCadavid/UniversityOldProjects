@@ -1,0 +1,39 @@
+#Programa que hace un palindromo con un String
+
+
+inicio:	  posA	   := 0
+	  posB	   := 0
+	  uno	   := 1
+	  IteraA   := 0
+	  IteraB   := 0
+	  tamStr   := 80
+	  posIni   := 10
+	  dirM	   := posIni
+	  baceM	   := 0
+	  cero	   := 0
+
+leer:	  readStr(laPerraMayor, tamStr)
+	  dirM := dirM - uno
+
+Tope:	  dirM := dirM + uno
+	  baceM := M[dirM + 0]
+	  if baceM <> cero then goto Tope 
+	  goto Inzsr
+
+Inzsr:	  posA := dirM - uno
+	  posB := dirM - uno
+
+ciclo:	  posB := posB + uno
+	  IteraA := M[posA + 0]
+	  M[posB + 0] := IteraA
+	  posA := posA- uno
+	  if posA < posIni then goto fin
+	  goto ciclo
+
+
+fin:	  writeStr(laPerraMayor)
+	  halt
+
+equ posA M[0] equ posB M[1] equ uno M[2] equ IteraA M[3]
+equ IteraB M[4] equ tamStr M[5] equ posIni M[6] equ dirM M[7]
+equ baceM M[8] equ cero M[9] equ laPerraMayor M[10]

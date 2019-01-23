@@ -1,0 +1,27 @@
+#Programa que lee tres numero, y muestra el menor
+
+readInt(a)
+readInt(b)
+readInt(c)
+
+#Comparamos que a sea menor que b
+
+              if a>b then goto BmallorC
+	      if a>c then goto AmallorC
+	      writeInt(a)
+	      goto fin
+
+BmallorC:     if b > c then goto menorC
+  	      writeInt(b)
+	      goto fin
+
+menorC:	      writeInt(c)
+	      goto fin
+
+AmallorC:     writeInt(c)
+	      goto fin
+
+fin: 	      halt
+
+equ a M[0] equ b M[1] equ c M[2]
+

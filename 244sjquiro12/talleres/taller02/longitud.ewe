@@ -1,0 +1,24 @@
+#Programa que dice el numero de caractere
+
+inicio:	  tamanoString := 80
+	  contador:= 0
+	  nulo:= 0
+	  uno:= 1
+	  dirBase := 5
+	  
+Leer:	  readStr(cadena, tamanoString)
+
+ciclo:	  dirBase := dirBase + uno
+	  temp := M[dirBase + 0]
+
+	  if temp = nulo then goto fin
+	  contador:= contador+ uno
+	  goto ciclo
+
+fin:	  writeInt(contador)
+	  halt
+
+equ tamanoString M[0] equ contador M[1] equ nulo M[2]
+equ uno M[3] equ dirBase M[4] equ temp M[5] equ cadena M[6]
+
+	  

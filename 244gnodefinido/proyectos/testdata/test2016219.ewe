@@ -1,0 +1,105 @@
+# testdata/test2016219.ewe
+start:
+	zero := 0
+	memory := 0
+	operator2 := 0
+	uno := 0
+	one := 1
+	operator1 := 0
+	dos := 0
+	tres := 0
+	cuatro := 0
+	sp := 1010
+# Push(9999)
+	sp := sp - one
+	operator1 := 9999
+	M[sp + 0] := operator1
+# Push(9999)
+	sp := sp - one
+	operator1 := 9999
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	uno := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(9999)
+	sp := sp - one
+	operator1 := 9999
+	M[sp + 0] := operator1
+# Push(99999)
+	sp := sp - one
+	operator1 := 99999
+	M[sp + 0] := operator1
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	dos := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(999999999)
+	sp := sp - one
+	operator1 := 999999999
+	M[sp + 0] := operator1
+# Push(99999)
+	sp := sp - one
+	operator1 := 99999
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	tres := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(33333)
+	sp := sp - one
+	operator1 := 33333
+	M[sp + 0] := operator1
+# Push(2222)
+	sp := sp - one
+	operator1 := 2222
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	cuatro := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+end:	halt
+# Variables
+equ zero	M[0]
+equ memory	M[1]
+equ operator2	M[2]
+equ uno	M[3]
+equ one	M[4]
+equ operator1	M[5]
+equ dos	M[6]
+equ tres	M[7]
+equ cuatro	M[8]
+equ sp	M[9]
+equ stack	M[1010]

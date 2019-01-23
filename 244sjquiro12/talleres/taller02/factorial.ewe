@@ -1,0 +1,26 @@
+#Programa que entrega el factorial
+
+inicio:	  uno:=1
+	  resultado := 1
+	  cero:= 0
+	  varError:= "Vea joven, no ingrese numeros negativos."
+leer:	  readInt(n)
+	  if n < cero then goto error
+	  
+
+ciclo:	  if n > cero  then goto fin
+	  resultado := resultado * n
+	  n:= n - uno
+	  goto ciclo
+
+error:	  writeInt(varError)
+	  halt
+
+
+fin:	  writeInt(resultado)
+	  halt
+
+equ uno M[0] equ  resultado M[1] equ cero M[2]
+equ n M[3] equ varError M[4]
+
+

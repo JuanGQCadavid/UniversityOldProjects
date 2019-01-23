@@ -1,0 +1,23 @@
+#Programa para calcular el valor medio.
+
+Inicio:      readInt(a)
+	     readInt(b)
+	     readInt(c)
+
+Cuerpo:	     if a<b then goto Vcon1
+	     if c<a then goto Vcon3
+	     writeInt(a)
+	     goto fin
+
+Vcon1:	     if c<b then goto Vcon2
+	     writeInt(b)
+	     goto fin
+
+Vcon2:	     writeInt(c)
+	     goto fin
+
+Vcon3:	     writeInt(c)
+
+fin:	     halt
+
+equ a M[0] equ b M[1] equ c M[2]

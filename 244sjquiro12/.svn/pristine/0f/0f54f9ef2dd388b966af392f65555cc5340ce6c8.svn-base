@@ -1,0 +1,29 @@
+#Busca los espacios que hay dentro de una
+
+inicio:	   caracterEspacio:= 32
+	   caracterNulo :=   0
+	   contadorEspacios:=0
+	   tamanoString := 80
+	   baceCadena :=   6
+	   uno := 1
+	   
+
+#Vamos a leer esa mierda
+
+Leer:  	   readStr(cadena,tamanoString)
+
+#Vamos a buscar los malnacidos
+
+ciclo:     baceCadena:= baceCadena + uno
+	   temp := M[baceCadena + 0]
+           if temp = caracterNulo then goto fin
+	   if temp <>  caracterEspacio then goto ciclo
+	   contadorEspacios := contadorEspacios + uno
+	   goto ciclo
+
+fin:	   writeInt(contadorEspacios)
+	   halt
+
+equ caracterEspacio M[0] equ caracterNulo M[1] equ contadorEspacios M[2]
+equ tamanoString M[3] equ baceCadena M[4] equ uno M[5] equ temp M[6] equ cadena M[7]
+	   

@@ -1,0 +1,44 @@
+#Programa que soluciona el punto 13.
+
+Inicio:	  dirCadena := 10
+	  cantidad  := 0
+	  buenos    := 0
+	  malos	    := 0
+	  uno	    := 1
+	  #topem	    := 122
+	  menorm    := 97
+	  topeM	    := 90
+	  #menorM    := 65
+	  topeLec   := 100
+	  enStockA  := 0
+	  enStockB  := 0
+	  cero 	    := 0
+
+leer:	  readStr(cadena, topeLec)
+
+
+ciclo:	  dirCadena := dirCadena + uno
+	  enStockA := M[dirCadena + 0]
+	  dirCadena := dirCadena+ uno
+	  enStockB := M[dirCadena + 0]
+
+	  if enStockA = cero then goto fin
+	  cantidad := cantidad + uno
+	  if enStockA < menorm then goto malo
+	  if enStockB > topeM then goto malo
+	  buenos := buenos + uno
+	  goto ciclo
+
+
+malo:	  malos := malos + uno
+	  goto ciclo
+
+fin:	  writeInt(cantidad)
+	  writeInt(buenos)
+	  writeInt(malos)
+	  halt
+
+
+equ dirCadena M[0] equ cantidad M[1] equ buenos M[2] equ malos M[3] equ uno M[4]
+equ menorm M[5] equ topeM M[6] equ topeLec M[7] equ enStockA M[8] equ enStockB M[9]
+equ cero M[10] equ cadena M[11]

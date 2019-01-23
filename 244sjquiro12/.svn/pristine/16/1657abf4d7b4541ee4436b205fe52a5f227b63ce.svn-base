@@ -1,0 +1,26 @@
+#Programa que lee 2 enteros y los compara
+
+Inicio:	  diez := 10
+	  veinte := 20
+	  uno := 1
+	  cero := 0
+
+Leer:	  readInt(a)
+	  readInt(b)
+
+Condi:	  if a<diez then goto Verda
+	  writeInt(uno)
+	  goto fin
+
+Verda:	  if b<veinte then goto result
+	  writeInt(uno)
+	  goto fin
+
+result:	  writeInt(cero)
+
+fin:	  halt
+
+equ diez M[0] equ veinte M[1]
+equ a M[2] equ b M[3]
+equ uno M[4] equ cero M[5]
+

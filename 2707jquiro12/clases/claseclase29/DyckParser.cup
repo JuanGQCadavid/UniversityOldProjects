@@ -1,0 +1,10 @@
+import java_cup.runtime.*;
+
+terminal A,C;
+non terminal s;
+
+s ::= A C
+  | A s C
+  | A C s
+  | A s C s
+  ;

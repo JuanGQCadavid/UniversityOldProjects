@@ -1,0 +1,28 @@
+#lee un numero N, y reune N numeros, para hacer el promedio
+
+ini: 	varSaludo := "Hola, ya sabes que hacer bebe"
+     	acomulado := 0
+	uno := 1
+	registro := 0
+	cero := 0
+
+writeStr(varSaludo)
+
+Leeer:	readInt(veces)
+	registro := veces
+
+ciclo:	veces := veces - uno
+	readInt(leido)
+	acomulado := acomulado + leido
+	if veces = cero then goto cal
+	goto ciclo
+
+cal:	acomulado := acomulado / registro
+	writeInt(acomulado)
+
+fin: halt
+
+equ acomulado M[1] equ uno M[2]
+equ registro M[3] equ veces M[4]
+equ leido M[5] equ cero M[6]
+equ varSaludo M[7]

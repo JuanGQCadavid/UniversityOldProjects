@@ -1,0 +1,15 @@
+<grupo>
+  <nombre>w7</nombre>
+  <url>https://svn.riouxsvn.com/270172w7</url>
+  <miembro>
+    <nombre>Juan Gonzalo Quiroz Cadavid</nombre>
+    <codigo>201610012010</codigo>
+    <email>jquiro12@eafit.edu.co</email>
+  </miembro>
+  <miembro>
+    <nombre>Sergio Andres Munoz Rojas</nombre>
+    <codigo>201610045010</codigo>
+    <email>smunozr2@eafit.edu.co</email>
+  </miembro>
+  <mainclass clase="AbcdefgMain"/>
+</grupo>

@@ -1,0 +1,633 @@
+# testdata/test2016206.ewe
+start:
+	a := 0
+	b := 0
+	c := 0
+	memory := 0
+	d := 0
+	e := 0
+	f := 0
+	g := 0
+	one := 1
+	h := 0
+	todo := 0
+	cS := 0
+	zero := 0
+	cero := 0
+	bS := 0
+	aS := 0
+	operator2 := 0
+	uno := 0
+	operator1 := 0
+	sp := 1020
+# Push(4343)
+	sp := sp - one
+	operator1 := 4343
+	M[sp + 0] := operator1
+# Assign
+	a := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(2343)
+	sp := sp - one
+	operator1 := 2343
+	M[sp + 0] := operator1
+# Assign
+	b := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(343)
+	sp := sp - one
+	operator1 := 343
+	M[sp + 0] := operator1
+# Assign
+	todo := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(1)
+	sp := sp - one
+	operator1 := 1
+	M[sp + 0] := operator1
+# Assign
+	uno := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(0)
+	sp := sp - one
+	operator1 := 0
+	M[sp + 0] := operator1
+# Assign
+	cero := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(24)
+	sp := sp - one
+	operator1 := 24
+	M[sp + 0] := operator1
+# Assign
+	d := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	c := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := c
+	M[sp + 0] := operator1
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := d
+	M[sp + 0] := operator1
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(9)
+	sp := sp - one
+	operator1 := 9
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := cS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := aS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	e := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := aS
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := cS
+	M[sp + 0] := operator1
+# Sub
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 - operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Push(5)
+	sp := sp - one
+	operator1 := 5
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	f := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := bS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := aS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Push(11)
+	sp := sp - one
+	operator1 := 11
+	M[sp + 0] := operator1
+# Push(22)
+	sp := sp - one
+	operator1 := 22
+	M[sp + 0] := operator1
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Divide
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 / operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	g := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := bS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Identifier
+	sp := sp - one
+	operator1 := aS
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Push(11)
+	sp := sp - one
+	operator1 := 11
+	M[sp + 0] := operator1
+# Push(22)
+	sp := sp - one
+	operator1 := 22
+	M[sp + 0] := operator1
+# Times
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 * operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Push(10)
+	sp := sp - one
+	operator1 := 10
+	M[sp + 0] := operator1
+# Module
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 % operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	h := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+end:	halt
+# Variables
+equ a	M[0]
+equ b	M[1]
+equ c	M[2]
+equ memory	M[3]
+equ d	M[4]
+equ e	M[5]
+equ f	M[6]
+equ g	M[7]
+equ one	M[8]
+equ h	M[9]
+equ todo	M[10]
+equ cS	M[11]
+equ zero	M[12]
+equ cero	M[13]
+equ bS	M[14]
+equ aS	M[15]
+equ operator2	M[16]
+equ uno	M[17]
+equ operator1	M[18]
+equ sp	M[19]
+equ stack	M[1020]

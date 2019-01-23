@@ -1,0 +1,144 @@
+# testdata/test2016213.ewe
+start:
+	a := 0
+	b := 0
+	c := 0
+	memory := 0
+	d := 0
+	one := 1
+	zero := 0
+	operator2 := 0
+	w := 0
+	operator1 := 0
+	x := 0
+	y := 0
+	z := 0
+	sp := 1014
+# Push(3)
+	sp := sp - one
+	operator1 := 3
+	M[sp + 0] := operator1
+# Push(4)
+	sp := sp - one
+	operator1 := 4
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	w := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Clear
+	memory := zero
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	x := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(3)
+	sp := sp - one
+	operator1 := 3
+	M[sp + 0] := operator1
+# Push(4)
+	sp := sp - one
+	operator1 := 4
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Push(9)
+	sp := sp - one
+	operator1 := 9
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	y := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Identifier
+	sp := sp - one
+	operator1 := a
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := b
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := c
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Identifier
+	sp := sp - one
+	operator1 := d
+	M[sp + 0] := operator1
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	z := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+end:	halt
+# Variables
+equ a	M[0]
+equ b	M[1]
+equ c	M[2]
+equ memory	M[3]
+equ d	M[4]
+equ one	M[5]
+equ zero	M[6]
+equ operator2	M[7]
+equ w	M[8]
+equ operator1	M[9]
+equ x	M[10]
+equ y	M[11]
+equ z	M[12]
+equ sp	M[13]
+equ stack	M[1014]

@@ -1,0 +1,16 @@
+#Programa que ... Haa usted ya sabe
+
+inicio:	  cero:= 0
+
+leer:	  readInt(a)
+	  readInt(b)
+
+condi:	  if a < cero then goto final
+	  if b < cero then goto final
+	  writeInt(a)
+	  halt
+
+final:	  writeInt(b)
+	  halt
+
+equ cero M[0] equ a M[1] equ b M[2]

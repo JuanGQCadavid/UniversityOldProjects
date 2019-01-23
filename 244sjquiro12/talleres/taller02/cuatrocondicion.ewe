@@ -1,0 +1,27 @@
+inicio:	restaUno :=0
+	restaDos :=0
+	uno := 1
+	cero:= 0
+
+
+leer:	readInt(a)
+	readInt(b)
+	readInt(c)
+	readInt(d)
+
+Ope:	restaUno := b - c
+	restaDos := c - d
+
+Log:	if a > restaUno then goto VCon
+	if b > restaDos then goto VCon
+	writeInt(uno)
+	goto fin
+
+VCon:	writeInt(cero)
+	goto fin
+
+fin:	halt
+
+equ a M[0] equ b M[1] equ c M[2]
+equ d M[3] equ restaUno M[4] equ restaDos M[5]
+equ cero M[6] equ uno M[7]

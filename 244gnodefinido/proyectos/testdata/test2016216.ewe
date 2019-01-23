@@ -1,0 +1,128 @@
+# testdata/test2016216.ewe
+start:
+	zero := 0
+	memory := 0
+	operator2 := 0
+	one := 1
+	operator1 := 0
+	x := 0
+	y := 0
+	z := 0
+	sp := 1009
+# Push(1)
+	sp := sp - one
+	operator1 := 1
+	M[sp + 0] := operator1
+# Minus
+	operator1 := M[sp + 0]
+	memory := memory - operator1
+	M[sp + 0] := memory
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Store
+	memory := M[sp + 0]
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Assign
+	z := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(0)
+	sp := sp - one
+	operator1 := 0
+	M[sp + 0] := operator1
+# Minus
+	operator1 := M[sp + 0]
+	memory := memory - operator1
+	M[sp + 0] := memory
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Store
+	memory := M[sp + 0]
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Store
+	memory := M[sp + 0]
+# Assign
+	y := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+# Push(2)
+	sp := sp - one
+	operator1 := 2
+	M[sp + 0] := operator1
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Store
+	memory := M[sp + 0]
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Clear
+	memory := zero
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Plus
+	operator1 := M[sp + 0]
+	memory := memory + operator1
+	M[sp + 0] := memory
+# Recall
+	sp := sp - one
+	M[sp + 0] := memory
+# Add
+	operator2 := M[sp + 0]
+	operator1 := M[sp + 1]
+	operator1 := operator1 + operator2
+	sp := sp + one
+	M[sp + 0] := operator1
+# Assign
+	x := M[sp + 0]
+# Write
+	operator1 := M[sp + 0]
+	sp := sp + one
+	writeInt(operator1)
+end:	halt
+# Variables
+equ zero	M[0]
+equ memory	M[1]
+equ operator2	M[2]
+equ one	M[3]
+equ operator1	M[4]
+equ x	M[5]
+equ y	M[6]
+equ z	M[7]
+equ sp	M[8]
+equ stack	M[1009]

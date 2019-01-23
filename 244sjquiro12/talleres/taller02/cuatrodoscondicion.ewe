@@ -1,0 +1,25 @@
+#Programa que lee 4 Enteros y los compara
+
+inicio:	  uno :=1
+	  cero := 0
+
+
+Leer:	  readInt(a)
+	  readInt(b)
+	  readInt(c)
+	  readInt(d)
+
+	  if a > b then goto VCon
+	  if b > c then goto VCon
+	  if c > d then goto VCon
+	  writeInt(uno)
+	  goto fin
+
+VCon:	  writeInt(cero)
+	  goto fin
+
+fin:	  halt
+
+equ a M[0] equ b M[1]
+equ c M[2] equ d M[3]
+equ uno M[4] equ cero M[5]	  

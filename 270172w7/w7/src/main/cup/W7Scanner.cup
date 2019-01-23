@@ -1,0 +1,59 @@
+import java_cup.runtime.*;
+import java_cup.runtime.ComplexSymbolFactory;
+import co.edu.eafit.dis.st0270.javacalc.abstree.*;
+
+/* Terminales a ser escaneados  */
+
+
+terminal      DESPLIZQ,DESPLDER,SUMA,RESTA,MULTI,DIV,IGUAL;
+terminal      IPARENTESIS,DPARENTESIS;
+terminal      S,P,M;
+terminal Integer	NUMBER;
+terminal String IDENTIFIER,IDENTIFIERFUNC;
+terminal      R,C;
+terminal      EOL;
+
+
+/* No terminales */
+
+non terminal	AbsTree	prog,stms,line,bitwiseexpr,expr,term,storable,factor;
+
+start with prog;
+
+prog ::= stms:a1                {: RESULT = new ProgNode(a1);           :}
+	;
+stms ::= stms:a1 line:a2        {: RESULT = new StmsNode(a1,a2);        :}
+     	| line:s1               {: RESULT = s1;      :}
+     	;
+line ::= bitwiseexpr:a1 EOL     {: RESULT = a1;          :}
+     | IDENTIFIER:a1 IGUAL bitwiseexpr:a2 EOL     {: RESULT = new AssignNode(a2,a1);        :}
+     | EOL:a1           {:    RESULT = new EpsilonNode();  :}
+     ;
+bitwiseexpr::= bitwiseexpr:a1 DESPLIZQ expr:a2  {: RESULT =  new ShiftLeftNode(a1,a2);  :}
+               | bitwiseexpr:a1 DESPLDER expr:a2   {: RESULT = new ShiftRightNode(a1,a2);:}
+               | expr:a1                {: RESULT = a1;  :}
+               ;
+expr ::= expr:a1 SUMA term:a2   {: RESULT = new AddNode(a1,a2);        :}
+     | expr:a1 RESTA term:a2    {: RESULT = new SubNode(a1,a2);       :}
+     | term:a1                  {: RESULT = a1;          :}
+     ;
+term ::= term:a1 MULTI storable:a2      {: RESULT = new TimesNode(a1,a2);       :}
+     | term:a1 DIV storable:a2          {: RESULT = new DivideNode(a1,a2);         :}
+     | storable:a1                      {: RESULT = a1;          :}
+     ;
+storable ::= factor:a1 S             {: RESULT = new StoreNode(a1);       :}
+         | factor:a1 P               {: RESULT = new PlusNode(a1);      :}
+         | factor:a1 M               {: RESULT = new MinusNode(a1);      :}
+         | factor:a1                    {: RESULT =  a1;          :}
+         ;
+factor ::= NUMBER:r1                    {: RESULT = new NumberNode(r1);         :}
+       | IDENTIFIER:a1                  {: RESULT = new IdentifierNode(a1);     :}
+       | IDENTIFIERFUNC:a1 IPARENTESIS bitwiseexpr:a2 DPARENTESIS   {: RESULT = new FunctionNode(a2,a1);       :}
+       | R                           {: RESULT = new RecallNode();         :}
+       | C                           {: RESULT = new ClearNode();          :}
+       | IPARENTESIS bitwiseexpr:a1 DPARENTESIS {: RESULT = (a1);  :}
+       ;
+
+
+
+

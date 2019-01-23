@@ -1,0 +1,24 @@
+#Programa que muestra que van de Mayor a menor
+
+ini:	uno := 1
+	cero:= 0
+
+Leer :	readInt(a)
+	readInt(b)
+	readInt(c)
+	readInt(d)
+
+condi:	if a < b then goto Nop
+	if b < c then goto Nop
+	if c < d then goto Nop
+	writeInt(uno)
+	goto fin
+
+Nop:	writeInt(cero)
+	goto fin
+
+fin: halt
+
+equ a M[0] equ b M[1]
+equ c M[2] equ d M[3]
+equ uno M[4] equ cero M[5]

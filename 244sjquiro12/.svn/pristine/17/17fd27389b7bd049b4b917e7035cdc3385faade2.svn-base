@@ -1,0 +1,25 @@
+#Programa que lee n numeros hasta que sean negativos, saca su promedio
+
+inicio:	  promedio:=0
+	  uno:=1
+	  contador:=0
+	  cero := 0
+	  
+Leer:	  readInt(valor)
+	  if valor < cero then goto show
+	  promedio:= promedio + valor
+	  contador:= contador + uno
+	  goto Leer
+
+show:	  if promedio = cero then goto fin
+	  promedio := promedio / contador
+	  writeInt(promedio)
+	  goto fin
+
+fin:	  halt
+
+equ promedio M[0] equ uno M[1] equ contador M[2]
+equ cero M[3] equ valor M[4]
+	  
+	  
+	  

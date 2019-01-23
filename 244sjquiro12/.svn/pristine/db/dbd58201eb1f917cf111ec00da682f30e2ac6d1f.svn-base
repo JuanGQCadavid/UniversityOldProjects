@@ -1,0 +1,55 @@
+#Programa que reconocer si es palindromo o no esta mondana.
+
+inicio:	  literalA	:= 0
+	  literalB	:= 0
+	  uno		:= 1
+	  cero		:= 0
+	  cantidad	:= 0
+	  tamStr	:= 80
+	  enStock	:= 0
+	  dirCadena	:= 12
+	  posB		:= 0
+	  posA		:= 12
+	  operacionI	:= 0
+	  dos		:= 2
+	  trece		:= 13	  
+
+leer:	  readStr(cadena, tamStr)
+
+
+	  #posB := posB + uno
+	  #posA := posA - uno
+
+
+cicloC:	  dirCadena := dirCadena + uno
+	  enStock := M[dirCadena + 0]
+
+	  if enStock = cero then goto compI
+	  cantidad := cantidad + uno
+	  goto cicloC
+	  	  
+
+compI:    posB:= cantidad + trece
+	  #posB:= posB + trece
+	  operacionI := cantidad % dos
+	  if operacionI = cero then goto cicloB
+	  writeInt(cero)
+	  halt
+
+cicloB:	  posB:= posB - uno
+	  posA:= posA + uno
+	  literalA := M[posA + 0]
+	  literalB := M[posB + 0]
+	  tamStr := posA + uno
+          if literalA <> literalB then goto finM
+	  if tamStr <> posB then goto cicloB
+	  writeInt(uno)
+	  halt
+
+finM:	  writeInt(cero)
+	  halt
+
+
+equ literalA M[0] equ literalB M[1] equ uno M[2] equ cero M[3]
+equ cantidad M[4] equ tamStr M[5] equ enStock M[6] equ dirCadena M[7]
+equ posB M[8] equ posA M[9] equ operacionI M[10] equ dos M[11] equ trece M[12] equ cadena M[13]

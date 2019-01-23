@@ -1,0 +1,29 @@
+#Programa que quita espacios del inicio
+
+inicio:	  cero := 0
+	  dirC := 0
+	  posC := 6
+	  tamC := 80
+	  uno := 1
+	  Spa := 32
+	  #dirN := 0
+	  posN := 90
+
+Leer:	  readStr(cadena,tamC)
+
+ciclo:	  dirC := M[posC + 0]
+	  posC := posC + uno
+
+	  if dirC = cero then goto fin
+	  if dirC = Spa then goto ciclo
+	  M[posN + 0] := dirC
+	  posN := posN + uno
+	  goto ciclo
+
+
+fin:	  writeStr(cadenaN)
+	  halt
+
+equ cero M[0] equ dirC M[1] equ posC M[2]equ tamC M[3]
+equ uno M[4] equ Spa M[5] equ cadena M[6]equ posN M[87]
+equ cadenaN M[90]
